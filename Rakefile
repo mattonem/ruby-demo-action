@@ -3,7 +3,7 @@
 		require 'rest-client'
 		require 'yaml'
 
-		config = YAML.load(File.read("credentials.yml"))
+		config = YAML.load(File.read("config.yml"))
 		ENV['BROWSERSTACK_USER'] = config['BROWSERSTACK_USER']
 		ENV['BROWSERSTACK_ACCESSKEY'] = config['BROWSERSTACK_ACCESSKEY']
 
