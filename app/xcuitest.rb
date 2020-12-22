@@ -14,7 +14,7 @@ key = ENV["BROWSERSTACK_ACCESSKEY"]
 	puts "(1) Uploading App...."
 	results = RestClient.post(
 		base_url + "upload",
-		file: File.new("./app/apps/XCUITest-App.ipa", 'rb')
+		file: File.new("./app/apps/BrowserStack-SampleApp.ipa", 'rb')
 	)
 	app_url = JSON.parse(results.body)['app_url']
 
@@ -24,7 +24,7 @@ key = ENV["BROWSERSTACK_ACCESSKEY"]
 	puts "(2) Uploading Test Suite...."
 	results = RestClient.post(
 		base_url + "xcuitest/test-suite",
-		file: File.new("./app/apps/XCUITest-AppTest.zip", 'rb')
+		file: File.new("./app/apps/BrowserStack-SampleXCUITest.zip", 'rb')
 	)
 	test_url = JSON.parse(results.body)['test_url']
 
