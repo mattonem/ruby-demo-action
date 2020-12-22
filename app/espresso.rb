@@ -5,13 +5,8 @@ require 'json'
 user = ENV["BROWSERSTACK_USER"]
 key = ENV["BROWSERSTACK_ACCESSKEY"]
 
-
 # API base URL
 	base_url = "https://#{user}:#{key}@api.browserstack.com/app-automate/"
-	devices = [
-		"Google Pixel-8.0", 
-		"Google Pixel 3-10.0"
-	]
 
 
 
@@ -19,10 +14,9 @@ key = ENV["BROWSERSTACK_ACCESSKEY"]
 	puts "(1) Uploading App...."
 	results = RestClient.post(
 		base_url + "upload",
-		file: File.new("./app/apps/Espresso-App.apk", 'rb')
+		file: File.new("./app/apps/Calculator.apk", 'rb')
 	)
 	app_url = JSON.parse(results.body)['app_url']
-
 
 
 
@@ -30,10 +24,9 @@ key = ENV["BROWSERSTACK_ACCESSKEY"]
 	puts "(2) Uploading Test Suite...."
 	results = RestClient.post(
 		base_url + "espresso/test-suite",
-		file: File.new("./app/apps/Espresso-AppTest.apk", 'rb'),
+		file: File.new("./app/apps/CalculatorTest.apk", 'rb'),
 	)
 	test_url = JSON.parse(results.body)['test_url']
-
 
 
 
@@ -44,11 +37,13 @@ key = ENV["BROWSERSTACK_ACCESSKEY"]
 		{ 
 			"app": app_url, 
 			"testSuite": test_url,
-			"devices": devices, 
+			"devices": [
+				"Google Pixel-8.0", 
+				"Google Pixel 3-10.0"
+			], 
 			"deviceLogs": true 
 		}.to_json,
 		content_type: :json
 	)
-
 
 
