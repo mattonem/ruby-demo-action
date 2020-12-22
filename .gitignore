@@ -1,0 +1,16 @@
+# Apps
+*.zip
+*.apk
+*.ipa
+
+# Configs
+*.yml
+
+# Logs
+*.log
+
+# Library
+Gemfile.lock
+
+# OS Files
+.DS_Store
