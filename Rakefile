@@ -5,8 +5,8 @@
 		require 'time'
 
 #		config = YAML.load(File.read("config.yml"))
-#		ENV['BROWSERSTACK_USER'] = config['BROWSERSTACK_USER']
-#		ENV['BROWSERSTACK_ACCESSKEY'] = config['BROWSERSTACK_ACCESSKEY']
+		ENV['BROWSERSTACK_USER'] = ENV['BROWSERSTACK_USERNAME']
+		ENV['BROWSERSTACK_ACCESSKEY'] = ENV['BROWSERSTACK_ACCESS_KEY']
 
 
 # Automate - Single Test
