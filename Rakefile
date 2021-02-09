@@ -20,7 +20,7 @@
 		browser_list = File.read('web/browsers/browsers.json')
 		browsers = JSON.parse(browser_list)['browsers']
 		parallel_tests = Array.new
-		build_name = "Demo parallel cron - "+ Time.now.strftime("%Y-%m-%d")
+		build_name = ENV['BROWSERSTACK_BUILD_NAME']
 
 		def run_parallel_test(browser,build_name)
 			command =  "os=\"#{browser['os']}\" "
@@ -59,7 +59,7 @@
 		device_list = File.read('web/browsers/devices.json')
 		devices = JSON.parse(device_list)['devices']
 		mobile_tests = Array.new
-		build_name = "Demo mobile cron - "+ Time.now.strftime("%Y-%m-%d")
+		build_name = ENV['BROWSERSTACK_BUILD_NAME']
 
 		def run_mobile_test(device,build_name)
 			command = "device=\"#{device['device']}\" "
