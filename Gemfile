@@ -1,7 +1,7 @@
 
 source "https://www.rubygems.org"
 
-gem 'selenium-webdriver'
+gem 'selenium-webdriver', '3.2.1'
 gem 'appium_lib'
 gem 'browserstack-local'
 gem 'rake'
