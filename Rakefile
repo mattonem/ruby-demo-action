@@ -59,7 +59,7 @@
 		device_list = File.read('web/browsers/devices.json')
 		devices = JSON.parse(device_list)['devices']
 		mobile_tests = Array.new
-		build_name = "Demo mobile - "+ Time.now.strftime("%Y-%m-%d")
+		build_name = "Demo mobile cron - "+ Time.now.strftime("%Y-%m-%d")
 
 		def run_mobile_test(device,build_name)
 			command = "device=\"#{device['device']}\" "
