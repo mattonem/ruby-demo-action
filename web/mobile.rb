@@ -12,7 +12,7 @@ class MobileTest < Test::Unit::TestCase
 		caps["os_version"] = ENV['os_version'] if ENV['os_version']
 		caps["realMobile"] = true
 
-		caps['project'] = "BrowserStack"
+		caps['project'] = "BrowserStack cron mobile"
 		caps['build'] = ENV['build_name']
 		caps['name'] = "Parallel Test: " + caps['device']
 
