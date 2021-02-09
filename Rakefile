@@ -20,7 +20,7 @@
 		browser_list = File.read('web/browsers/browsers.json')
 		browsers = JSON.parse(browser_list)['browsers']
 		parallel_tests = Array.new
-		build_name = "Demo parallel - "+ Time.now.strftime("%Y-%m-%d")
+		build_name = "Demo parallel cron - "+ Time.now.strftime("%Y-%m-%d")
 
 		def run_parallel_test(browser,build_name)
 			command =  "os=\"#{browser['os']}\" "
