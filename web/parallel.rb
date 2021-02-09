@@ -19,7 +19,7 @@ class ParallelTest < Test::Unit::TestCase
 			browser_name = "Internet Explorer #{ENV['browser_version']}"
 		end
 
-		caps['project'] = "BrowserStack cron"
+		caps['project'] = "BrowserStack desktop cron"
 		caps['build'] = ENV['build_name']
 		caps['name'] = "Parallel Test: " + browser_name
 
