@@ -25,6 +25,7 @@ class MobileTest < Test::Unit::TestCase
 
   def test_post
 		@driver.navigate.to 'http://www.browserstack.com'
+	  	sleep 5
 		title = @driver.title
     assert_equal(title, title)
   end
