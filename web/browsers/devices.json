@@ -1,12 +1,28 @@
 {
 	"devices": [
 		{
-			"device": "Google Pixel",
-			"realMobile": true
+			"device": "Google Pixel 3"
 		},
 		{
-			"device": "iPhone 7",
-			"realMobile": true
+			"device": "Google Pixel 5"
+		},
+		{
+			"device": "iPhone 8"
+		},
+		{
+			"device": "iPhone 11"
+		},
+		{
+			"device": "Samsung Galaxy Note 20"
+		},
+		{
+			"device": "OnePlus 6T"
+		},
+		{
+			"device": "Samsung Galaxy S9 Plus"
+		},
+		{
+			"device": "Xiaomi Redmi Note 7"
 		}
 	]
 }
