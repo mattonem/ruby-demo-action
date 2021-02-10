@@ -13,7 +13,7 @@ on:
     - cron:  '*/10 * * * *'
   push:
     branches: 
-     - actions
+     - master
   
 jobs:
   test-desktop:
