@@ -31,6 +31,7 @@ class ParallelTest < Test::Unit::TestCase
 
   def test_post
 		@driver.navigate.to 'http://www.browserstack.com'
+	  	sleep 2
 		title = @driver.title
     assert_equal(title, title)
   end
