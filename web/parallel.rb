@@ -51,7 +51,7 @@ class ParallelTest < Test::Unit::TestCase
   end
 
   def teardown
-  	api_url = "https://#{ENV["BROWSERSTACK_USER"]}:#{ENV["BROWSERSTACK_ACCESSKEY"]}@www.browserstack.com/app-automate/sessions/#{@driver.session_id}.json"
+  	api_url = "https://#{ENV["BROWSERSTACK_USER"]}:#{ENV["BROWSERSTACK_ACCESSKEY"]}@www.browserstack.com/automate/sessions/#{@driver.session_id}.json"
   	if self.passed?
   		RestClient.put api_url, {"status"=>"passed"}, {:content_type => :json}
   	else
