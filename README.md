@@ -44,3 +44,4 @@ Run App Automate tests using these commands:
 |Appium|`rake appium`|The rake task checks if a demo app has been uploaded and automatically uploads the WikipediaSample app if not|
 |Espresso|`rake espresso`|The script uploads the Calculator and CalculatorTest files, then executes tests via API|
 |XCUITest|`rake xcuitest`|The script uploads the BrowserStack-SampleApp and BrowserStack-SampleXCUITest files,  then executes tests via API|
+ 
