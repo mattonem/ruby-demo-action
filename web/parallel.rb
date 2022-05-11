@@ -43,12 +43,12 @@ class ParallelTest < Test::Unit::TestCase
     assert_equal(title, title)
   end
 
-  def test_post_fail
-		@driver.navigate.to 'http://www.browserstack.com'
-	  	sleep 10
-		title = @driver.title
-    assert_equal(title, 'wrong title')
-  end
+#   def test_post_fail
+# 		@driver.navigate.to 'http://www.browserstack.com'
+# 	  	sleep 10
+# 		title = @driver.title
+#     assert_equal(title, 'wrong title')
+#   end
 
   def teardown
   	api_url = "https://#{ENV["BROWSERSTACK_USER"]}:#{ENV["BROWSERSTACK_ACCESSKEY"]}@www.browserstack.com/automate/sessions/#{@driver.session_id}.json"
